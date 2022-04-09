@@ -1,0 +1,30 @@
+.lev1 {
+  padding: 0.5rem 1rem;
+  &__line {
+    border-left: 2px solid #999999;
+    height: 2rem;
+    margin-left: 1rem;
+    position: absolute;
+  }
+  &__line-hor {
+    border-bottom: 2px solid #999999;
+    width: 2rem;
+    margin-left: 1rem;
+    padding-bottom: 2rem;
+    position: absolute;
+  }
+}
+.lev2 {
+  padding: 1rem 0 0.5rem 1rem;
+  margin-left: 2rem;
+  &__container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-left: 1rem;
+    border-left: 2px solid #999999;
+    padding: 1.2rem;
+  }
+}
