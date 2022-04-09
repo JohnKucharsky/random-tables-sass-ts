@@ -4,9 +4,11 @@ import { show, tableheader } from "../Levels/LevelOne";
 import TableContent, { filterArr } from "../TableContent/TableContent";
 import "./table.scss";
 
+// types
 type Props = {
   item: tableheader;
 };
+// types
 
 const Table: React.FC<Props> = ({ item }) => {
   const [show, setShow] = useState({} as show);

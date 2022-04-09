@@ -1,4 +1,6 @@
 import "./tbody.scss";
+
+// types
 export type filterArr = {
   title: string;
   number: number;
@@ -11,6 +13,8 @@ type Props = {
   handleSortIndex: () => void;
   handleSortNumber: () => void;
 };
+// types
+
 const TableContent: React.FC<Props> = ({
   arr,
   sortIndex,

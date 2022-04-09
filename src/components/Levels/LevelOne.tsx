@@ -2,6 +2,7 @@ import { useState } from "react";
 import LevelTwo from "./LevelTwo";
 import "./lev.scss";
 
+// types
 export type show = {
   show: boolean;
   title: string;
@@ -22,10 +23,11 @@ type lev1 = {
   title: string;
   items: Array<lev2>;
 };
-
 type Props = {
   lev1: lev1;
 };
+// types
+
 const LevelOne: React.FC<Props> = ({ lev1 }) => {
   const [show, setShow] = useState({} as show);
 
@@ -38,6 +40,8 @@ const LevelOne: React.FC<Props> = ({ lev1 }) => {
       return setShow({ show: true, title: lev1.title });
     }
   };
+  // toggle
+
   return (
     <div className="lev1">
       <button onClick={() => toggle(lev1.title)}>{lev1.title}</button>

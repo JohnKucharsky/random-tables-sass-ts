@@ -2,9 +2,11 @@ import { useState } from "react";
 import Table from "../Table/Table";
 import { lev2, show } from "./LevelOne";
 
+// types
 type Props = {
   lev2: lev2;
 };
+// types
 
 const LevelTwo: React.FC<Props> = ({ lev2 }) => {
   const [show, setShow] = useState({} as show);
@@ -18,6 +20,7 @@ const LevelTwo: React.FC<Props> = ({ lev2 }) => {
       return setShow({ show: true, title: lev2.title });
     }
   };
+  // toggle
 
   return (
     <div className="lev2">
