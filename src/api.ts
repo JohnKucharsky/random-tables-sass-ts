@@ -30,3 +30,26 @@ export default function randomData() {
 
   return n;
 }
+// types
+export type show = {
+  show: boolean;
+  title: string;
+};
+export type tablecontent = { title: string; number: number };
+export type tableheader = {
+  dateEnd: number;
+  dateStart: number;
+  subTitle: string;
+  title: string;
+  data: Array<tablecontent>;
+};
+export type lev2 = {
+  title: string;
+  items: Array<tableheader>;
+};
+export type lev1 = {
+  title: string;
+  items: Array<lev2>;
+};
+
+// types

@@ -1,14 +1,12 @@
 import moment from "moment";
 import { useState } from "react";
-import { show, tableheader } from "../Levels/LevelOne";
+import { show, tableheader } from "../../api";
 import TableContent, { filterArr } from "../TableContent/TableContent";
 import "./table.scss";
 
-// types
 type Props = {
   item: tableheader;
 };
-// types
 
 const Table: React.FC<Props> = ({ item }) => {
   const [show, setShow] = useState({} as show);

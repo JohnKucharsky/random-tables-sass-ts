@@ -1,32 +1,11 @@
 import { useState } from "react";
 import LevelTwo from "./LevelTwo";
 import "./lev.scss";
+import { lev1, show } from "../../api";
 
-// types
-export type show = {
-  show: boolean;
-  title: string;
-};
-export type tablecontent = { title: string; number: number };
-export type tableheader = {
-  dateEnd: number;
-  dateStart: number;
-  subTitle: string;
-  title: string;
-  data: Array<tablecontent>;
-};
-export type lev2 = {
-  title: string;
-  items: Array<tableheader>;
-};
-type lev1 = {
-  title: string;
-  items: Array<lev2>;
-};
 type Props = {
   lev1: lev1;
 };
-// types
 
 const LevelOne: React.FC<Props> = ({ lev1 }) => {
   const [show, setShow] = useState({} as show);
