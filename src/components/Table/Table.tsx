@@ -10,7 +10,7 @@ type Props = {
 
 const Table: React.FC<Props> = ({ item }) => {
   const [show, setShow] = useState({} as show);
-  const [arr, setArr] = useState([] as any);
+  const [arr, setArr] = useState([] as Array<filterArr>);
   const [sortIndex, setSortIndex] = useState(true);
   const [sortNumber, setSortNumber] = useState(false);
 
@@ -23,9 +23,7 @@ const Table: React.FC<Props> = ({ item }) => {
 
   // sort table
   let sorted: Array<filterArr> = [];
-  item.data.map((element: any, index: number) =>
-    sorted.push({ ...element, index })
-  );
+  item.data.map((element, index) => sorted.push({ ...element, index }));
   const handleSortIndex = () => {
     if (!sortIndex) {
       sorted.sort((a: any, b: any) => b.index - a.index);
